@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./fonts.css">
+    <link rel="stylesheet" href="./styles.css">
+    <script src="./scripts.js"></script>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="aside">
+            <div class="logo">
+                SDS
+            </div>
+            <nav class="nav">
+                <label class="toggle-icon" for="toggle-button">
+                    <svg enable-background="new 0 0 24 24" height="30" viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <g>
+                            <path
+                                d="m21.5 24h-19c-1.379 0-2.5-1.122-2.5-2.5v-19c0-1.378 1.121-2.5 2.5-2.5h19c1.379 0 2.5 1.122 2.5 2.5v19c0 1.378-1.121 2.5-2.5 2.5zm-19-23c-.827 0-1.5.673-1.5 1.5v19c0 .827.673 1.5 1.5 1.5h19c.827 0 1.5-.673 1.5-1.5v-19c0-.827-.673-1.5-1.5-1.5z" />
+                        </g>
+                        <g>
+                            <path d="m16.5 8h-9c-.276 0-.5-.224-.5-.5s.224-.5.5-.5h9c.276 0 .5.224.5.5s-.224.5-.5.5z" />
+                        </g>
+                        <g>
+                            <path
+                                d="m16.5 12.5h-9c-.276 0-.5-.224-.5-.5s.224-.5.5-.5h9c.276 0 .5.224.5.5s-.224.5-.5.5z" />
+                        </g>
+                        <g>
+                            <path
+                                d="m16.5 17h-9c-.276 0-.5-.224-.5-.5s.224-.5.5-.5h9c.276 0 .5.224.5.5s-.224.5-.5.5z" />
+                        </g>
+                    </svg>
+                </label>
+                <input id="toggle-button" class="toggle-button" type="checkbox">
+
+                <ul class="nav__list">
+                    <li class="nav__list-item "><a href="#">Work</a></li>
+                    <li class="nav__list-item nav__list-item--active"><a href="#">About</a></li>
+                    <li class="nav__list-item"><a href="#">Services</a></li>
+                    <li class="nav__list-item"><a href="#">Blog</a></li>
+                    <li class="nav__list-item"><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="serch">
+                <div class="search-icon">
+                    <svg class="svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                        <path
+                            d="M505.7 475.6l-145.6-145.6c28.2-34.8 45.2-79.1 45.2-127.3 0-111.7-90.9-202.7-202.7-202.7S0 90.9 0 202.7s90.9 202.7 202.7 202.7c48.2 0 92.5-17 127.3-45.2l145.6 145.6c4.2 4.2 9.6 6.3 15.1 6.3s10.9-2.1 15.1-6.3C514.1 497.4 514.1 483.9 505.7 475.6zM202.7 362.7c-88.2 0-160-71.8-160-160s71.8-160 160-160 160 71.8 160 160S290.9 362.7 202.7 362.7z" />
+                    </svg>
+                </div>
+            </div>
+        </div>
+
+        <div class="main-content">
+
+
+
+
+            <div class="hero">
+                <div class="main-content-wrap main-content-xl-p">
+                    <h1 class="hero__title">
+                        Title of the page
+                    </h1>
+                    <div class="hero__subtitle">
+                        Subtitle
+                    </div>
+                    <div class="hero__content">
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sint quae voluptatum delectus
+                        molestias, earum magnam modi voluptates vero consequuntur! Atque neque illum, at quam assumenda
+                        magni dicta itaque distinctio esse fugit quibusdam tempora omnis dolorum?
+                    </div>
+                    <div class="hero__actions">
+                        <button class="btn btn-lg" type="button">Button</button>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- 
+            <div class="services">
+
+                <div class="item">
+                    <div class="icon">
+                        
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M380 133.5l-112-128C265 2 260.6 0 256 0c-4.6 0-9 2-12 5.5l-112 128c-4.1 4.7-5.2 11.4-2.5 17.2C132 156.3 137.7 160 144 160h64v208c0 8.8 7.2 16 16 16h64c8.8 0 16-7.2 16-16V160h64c6.3 0 12-3.6 14.6-9.4C385.2 144.9 384.2 138.2 380 133.5z"/><path d="M432 352v96H80v-96H16v128c0 17.7 14.3 32 32 32h416c17.7 0 32-14.3 32-32V352H432z"/></svg>
+                    </div>
+                    <div class="content">
+                        <h3 class="item-title">Title</h3>
+                        <p class="item-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis id consequuntur laboriosam deserunt quos. Sequi, possimus! Reprehenderit quidem eius perferendis.</p>
+                    </div>
+                    <div class="actions">
+                        <button>click</button>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <div class="icon">
+                        
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M380 133.5l-112-128C265 2 260.6 0 256 0c-4.6 0-9 2-12 5.5l-112 128c-4.1 4.7-5.2 11.4-2.5 17.2C132 156.3 137.7 160 144 160h64v208c0 8.8 7.2 16 16 16h64c8.8 0 16-7.2 16-16V160h64c6.3 0 12-3.6 14.6-9.4C385.2 144.9 384.2 138.2 380 133.5z"/><path d="M432 352v96H80v-96H16v128c0 17.7 14.3 32 32 32h416c17.7 0 32-14.3 32-32V352H432z"/></svg>
+                    </div>
+                    <div class="content">
+                        <h3 class="item-title">Title</h3>
+                        <p class="item-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis id consequuntur laboriosam deserunt quos. Sequi, possimus! Reprehenderit quidem eius perferendis.</p>
+                    </div>
+                    <div class="actions">
+                        <button>click</button>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <div class="icon">
+                        
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M380 133.5l-112-128C265 2 260.6 0 256 0c-4.6 0-9 2-12 5.5l-112 128c-4.1 4.7-5.2 11.4-2.5 17.2C132 156.3 137.7 160 144 160h64v208c0 8.8 7.2 16 16 16h64c8.8 0 16-7.2 16-16V160h64c6.3 0 12-3.6 14.6-9.4C385.2 144.9 384.2 138.2 380 133.5z"/><path d="M432 352v96H80v-96H16v128c0 17.7 14.3 32 32 32h416c17.7 0 32-14.3 32-32V352H432z"/></svg>
+                    </div>
+                    <div class="content">
+                        <h3 class="item-title">Title</h3>
+                        <p class="item-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis id consequuntur laboriosam deserunt quos. Sequi, possimus! Reprehenderit quidem eius perferendis.</p>
+                    </div>
+                    <div class="actions">
+                        <button>click</button>
+                    </div>
+                </div>
+
+            </div> -->
+
+            <div class="blog">
+                <div class="main-content-wrap">
+                    <div class="blog__heading">
+                        From the blog
+                    </div>
+                    <div class="blog__content">
+                        <div class="post-preview">
+                            <div class="post-preview__img">
+                                <img src="https://fakeimg.pl/640x120/282828/eae0d0/?retina=1">
+                            </div>
+                            <div class="post-preview__desc">
+                                <h3 class="post-preview__title">
+                                    Lorem ipsum dolor sit.
+                                </h3>
+                                <p class="post-preview__text">
+                                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sint quae voluptatum delectus
+                                    molestias, earum magnam modi voluptates vero consequuntur! Atque neque illum, at quam assumenda
+                                    magni dicta itaque distinctio 
+                                </p>
+                                <div class="post-preview__actions">
+                                    <button class="btn">
+                                        Read more
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="post-preview">
+                            <div class="post-preview__img">
+                                <img src="https://fakeimg.pl/440x820/282828/eae0d0/?retina=1">
+                            </div>
+                            <div class="post-preview__desc">
+                                <h3 class="post-preview__title">
+                                    Lorem ipsum dolor sit.
+                                </h3>
+                                <p class="post-preview__text">
+                                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sint quae voluptatum delectus
+                                    molestias, earum magnam modi voluptates vero consequuntur! Atque neque illum, at quam assumenda
+                                    magni dicta itaque distinctio 
+                                </p>
+                                <div class="post-preview__actions">
+                                    <button class="btn">
+                                        Read more
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="post-preview">
+                            <div class="post-preview__img">
+                                <img src="https://fakeimg.pl/640x620/282828/eae0d0/?retina=1">
+                            </div>
+                            <div class="post-preview__desc">
+                                <h3 class="post-preview__title">
+                                    Lorem ipsum dolor sit.
+                                </h3>
+                                <p class="post-preview__text">
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia, eveniet itaque?
+                                    Ducimus facere reiciendis ea corrupti quas maiores odit. Delectus! Atque neque illum, at quam assumenda
+                                    magni dicta itaque distinctio 
+                                </p>
+                                <div class="post-preview__actions">
+                                    <button class="btn">
+                                        Read more
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <footer class="footer">
+                <div class="main-content-wrap">
+
+                    <div>
+                        <nav class="nav nav--footer">
+                            <ul class="nav__list">
+                                <li class="nav__list-item"><a href="#">Work</a></li>
+                                <li class="nav__list-item"><a href="#">About</a></li>
+                                <li class="nav__list-item"><a href="#">Services</a></li>
+                                <li class="nav__list-item"><a href="#">Blog</a></li>
+                                <li class="nav__list-item"><a href="#">Contact</a></li>
+                            </ul>
+                        </nav>
+                        <p class="footer__copywrite">
+                            All rights reserved
+                        </p>
+                    </div>
+
+                    <div class="social-icons">
+                        <ul class="social-icons__list">
+                            <li class="social-icons__list-item">
+                                <a href="#">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="512"><path d="m16 4h2.2v-3.8c-0.4-0.1-1.7-0.2-3.2-0.2-3.2 0-5.3 2-5.3 5.6v3.4h-3.5v4.3h3.5v10.7h4.3v-10.7h3.3l0.5-4.3h-3.9v-2.9c0-1.2-2.1 2.1-2.1z"/></svg>
+                                </a>
+                            </li>
+                            <li class="social-icons__list-item">
+                                <a href="#">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M352 0H160C71.6 0 0 71.6 0 160v192c0 88.4 71.6 160 160 160h192c88.4 0 160-71.6 160-160V160C512 71.6 440.4 0 352 0zM464 352c0 61.8-50.2 112-112 112H160c-61.8 0-112-50.2-112-112V160C48 98.2 98.2 48 160 48h192c61.8 0 112 50.2 112 112V352z"/><path d="M256 128c-70.7 0-128 57.3-128 128s57.3 128 128 128 128-57.3 128-128S326.7 128 256 128zM256 336c-44.1 0-80-35.9-80-80 0-44.1 35.9-80 80-80s80 35.9 80 80C336 300.1 300.1 336 256 336z"/><circle cx="393.6" cy="118.4" r="17.1"/></svg>                                </a>
+                            </li>
+                            <li class="social-icons__list-item">
+                                <a href="#">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="512"><path d="m16 4h2.2v-3.8c-0.4-0.1-1.7-0.2-3.2-0.2-3.2 0-5.3 2-5.3 5.6v3.4h-3.5v4.3h3.5v10.7h4.3v-10.7h3.3l0.5-4.3h-3.9v-2.9c0-1.2-2.1 2.1-2.1z"/></svg>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+            </footer>
+        </div>
+    </div>
+</body>
+
+</html>
