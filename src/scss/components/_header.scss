@@ -1,3 +1,13 @@
 .header {
-    background: blue;
+    background: $color-primary;
+    grid-area: header;
+    height: 100%;
+
+    &__categories {
+        align-items: center;
+        display: flex;
+        height: 100%;
+        padding: 0 25px;
+    }
+
 }

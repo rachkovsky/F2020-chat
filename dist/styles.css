@@ -1,11 +1,93 @@
+.wrapper {
+  display: grid;
+  grid-template-areas: "aside-left header-top header-top" "aside-left center aside-right";
+  grid-template-columns: 27.7% 1fr 27.7%;
+  grid-template-rows: 100px 1fr;
+  height: 100vh;
+  margin: 0 auto;
+  max-width: 1440px; }
+
+.center {
+  grid-area: center; }
+
+.header-top {
+  grid-area: header-top; }
+
+.aside-left {
+  grid-area: aside-left; }
+
+.aside-right {
+  grid-area: aside-right; }
+
 .header {
-  background: blue; }
+  background: #509DE1;
+  grid-area: header;
+  height: 100%; }
+  .header__categories {
+    align-items: center;
+    display: flex;
+    height: 100%;
+    padding: 0 25px; }
 
 .chat {
-  background: green; }
+  background: transparent; }
+  .chat__actions {
+    display: flex; }
+  .chat__inputs {
+    flex-grow: 1;
+    position: relative; }
+  .chat__input-text {
+    font-size: 20px;
+    background: #D5E0E6;
+    border: none;
+    border-radius: 5px;
+    height: 70px;
+    padding: 0;
+    line-height: 70px;
+    width: 100%; }
+  .chat__input-file {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 60px;
+    height: 100%;
+    cursor: pointer; }
+    .chat__input-file input {
+      position: absolute;
+      width: 0;
+      opacity: 0;
+      outline: 0;
+      pointer-events: none;
+      user-select: none; }
 
 .friends-list {
-  background: brown; }
+  background: brown;
+  grid-area: friends-list; }
 
 .online-friends-list {
-  background: yellow; }
+  background: yellow;
+  grid-area: online-friends-list; }
+
+.categories-list {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0; }
+  .categories-list__item {
+    margin-right: 20px; }
+    .categories-list__item:last-child {
+      margin-right: 0; }
+  .categories-list__button {
+    background: transparent;
+    border: 0;
+    border-radius: 4px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 18px;
+    padding: 15px; }
+    .categories-list__button.active, .categories-list__button:hover {
+      background-color: #6AACE6; }

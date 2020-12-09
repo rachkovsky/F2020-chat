@@ -13,7 +13,8 @@
   "author": "Pavel",
   "license": "ISC",
   "dependencies": {
-    "bootstrap": "^4.5.3"
+    "bootstrap": "^4.5.3",
+    "normalize-scss": "^7.0.1"
   },
   "devDependencies": {
     "browser-sync": "^2.26.13",

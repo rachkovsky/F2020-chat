@@ -1,0 +1,27 @@
+.wrapper {
+    display: grid;
+    grid-template-areas: 
+        "aside-left header-top header-top"
+        "aside-left center aside-right";
+    grid-template-columns: 27.7% 1fr 27.7%;
+    grid-template-rows: 100px 1fr;
+    height: 100vh;
+    margin: 0 auto;
+    max-width: 1440px;
+}
+
+.center {
+    grid-area: center;
+}
+
+.header-top {
+    grid-area: header-top;
+}
+
+.aside-left {
+    grid-area: aside-left;
+}
+
+.aside-right {
+    grid-area: aside-right;
+}

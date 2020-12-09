@@ -8,13 +8,47 @@
 <body>
   <div class="wrapper">
     <div class="header-top">
-      <div class="header">header</div>
+      <div class="header"> 
+        <div class="header__categories">
+          <ul class="categories-list">
+            <li class="categories-list__item">
+              <button class="categories-list__button">Work</button>
+            </li>
+            <li class="categories-list__item">
+              <button class="categories-list__button">Family</button>
+            </li>
+            <li class="categories-list__item">
+              <button class="categories-list__button">Friends</button>
+            </li>
+            <li class="categories-list__item">
+              <button class="categories-list__button">+ Category</button>
+            </li>
+          </ul>
+        </div>
+        <div class="header__dropdown"></div>
+      </div>
     </div>
     <div class="aside-left">
       <div class="friends-list">friends-list </div>
     </div>
     <div class="center">
-      <div class="chat">chat</div>
+      <div class="chat"> 
+        <div class="chat__messages"></div>
+        <div class="chat__actions">
+          <div class="chat__inputs">
+            <input class="chat__input-text" type="text">
+            <label class="chat__input-file"><span> 
+                <svg xmlns="http://www.w3.org/2000/svg" height="25" width="25" viewbox="-96 0 512 512">
+                  <path d="m160 512c-88.2 0-160-71.8-160-160v-229.3c0-8.8 7.2-16 16-16s16 7.2 16 16v229.3c0 70.6 57.4 128 128 128s128-57.4 128-128v-234.7c0-47.1-38.3-85.3-85.3-85.3-47.1 0-85.3 38.3-85.3 85.3v213.3c0 23.5 19.1 42.7 42.7 42.7s42.7-19.1 42.7-42.7v-208c0-8.8 7.2-16 16-16s16 7.2 16 16v208c0 41.2-33.5 74.7-74.7 74.7s-74.7-33.5-74.7-74.7v-213.3c0-64.7 52.6-117.3 117.3-117.3 64.7 0 117.3 52.7 117.3 117.3v234.7c0 88.2-71.8 160-160 160zm0 0"></path>
+                </svg></span>
+              <input type="file">
+            </label>
+          </div>
+          <div class="chat__send">
+            <button>Send</button>
+          </div>
+        </div>
+      </div>
     </div>
     <div class="aside-right">
       <div class="online-friends-list">online-friends-list </div>
