@@ -31,6 +31,10 @@
 
 .chat {
   background: transparent; }
+  .chat__messages {
+    padding: 20px;
+    display: flex;
+    flex-direction: column; }
   .chat__actions {
     display: flex; }
   .chat__inputs {
@@ -91,3 +95,15 @@
     padding: 15px; }
     .categories-list__button.active, .categories-list__button:hover {
       background-color: #6AACE6; }
+
+.message {
+  align-self: flex-start;
+  padding: 15px;
+  background-color: #ddd;
+  max-width: 350px;
+  width: 100%;
+  margin-bottom: 20px; }
+  .message--owner {
+    align-self: flex-end; }
+    .message--owner .message__img {
+      display: none; }

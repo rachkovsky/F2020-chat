@@ -1,0 +1,18 @@
+.message {
+    align-self: flex-start;
+    padding: 15px;
+    background-color: #ddd;
+    max-width: 350px;
+    width: 100%;
+    margin-bottom: 20px;
+
+    &--owner {
+        align-self: flex-end;
+
+        .message__img {
+            display: none;
+        }
+    }
+
+
+}

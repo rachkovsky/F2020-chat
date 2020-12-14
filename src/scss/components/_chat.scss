@@ -1,6 +1,12 @@
 .chat {
     background: transparent;
 
+    &__messages {
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+    }
+
     &__actions {
         display: flex;
     }
