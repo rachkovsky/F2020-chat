@@ -4,9 +4,9 @@
         "aside-left header-top header-top"
         "aside-left center aside-right";
     grid-template-columns: 27.7% 1fr 27.7%;
-    grid-template-rows: 100px 1fr;
+    grid-template-rows: $header-height 1fr;
     height: 100vh;
-    margin: 0 auto;
+    // margin: 0 auto;
     max-width: 1440px;
 }
 

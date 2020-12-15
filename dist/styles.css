@@ -1,10 +1,133 @@
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  margin: 0;
+  padding: 0;
+  vertical-align: baseline; }
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol,
+ul {
+  list-style: none; }
+
+blockquote,
+q {
+  quotes: none; }
+
+blockquote:before, blockquote:after {
+  content: "";
+  content: none; }
+
+q:before, q:after {
+  content: "";
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
 .wrapper {
   display: grid;
   grid-template-areas: "aside-left header-top header-top" "aside-left center aside-right";
   grid-template-columns: 27.7% 1fr 27.7%;
   grid-template-rows: 100px 1fr;
   height: 100vh;
-  margin: 0 auto;
   max-width: 1440px; }
 
 .center {
@@ -28,6 +151,10 @@
     display: flex;
     height: 100%;
     padding: 0 25px; }
+
+.header-search {
+  background-color: #D6DFE6;
+  height: 100px; }
 
 .chat {
   background: transparent; }
@@ -69,8 +196,25 @@
       user-select: none; }
 
 .friends-list {
-  background: brown;
   grid-area: friends-list; }
+
+.friend-preview {
+  align-items: flex-start;
+  background-color: #F1F5F8;
+  display: flex;
+  max-height: 120px;
+  padding: 35px 40px; }
+  .friend-preview__img {
+    border-radius: 4px;
+    flex: 0 0 55px;
+    height: 55px;
+    overflow: hidden; }
+    .friend-preview__img img {
+      display: block; }
+  .friend-preview__content {
+    padding: 0 20px; }
+  .friend-preview__time {
+    flex: 0 0 50px; }
 
 .online-friends-list {
   background: yellow;
@@ -107,3 +251,7 @@
     align-self: flex-end; }
     .message--owner .message__img {
       display: none; }
+
+.add-friend {
+  background-color: #F1F5F8;
+  height: 100px; }

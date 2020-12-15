@@ -1,0 +1,27 @@
+.friend-preview {
+    align-items: flex-start;
+    background-color: #F1F5F8;
+    display: flex;
+    max-height: 120px;
+    padding: 35px 40px;
+
+    &__img {
+        border-radius: 4px;
+        flex: 0 0 55px;
+        height: 55px;
+        overflow: hidden;
+
+        img {
+            display: block;
+        }
+    }
+
+    &__content {
+        padding: 0 20px;
+    }
+
+    &__time {
+        flex: 0 0 50px; 
+    }
+
+}
