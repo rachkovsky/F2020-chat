@@ -3,6 +3,7 @@ const sass = require('gulp-sass');
 const cssnano = require('gulp-cssnano');
 const rename = require('gulp-rename');
 const pug = require('gulp-pug');
+const minify = require('gulp-minify');
  
 
 const browserSync = require('browser-sync').create();
@@ -26,15 +27,21 @@ function templates() {
     .pipe(browserSync.stream());
 }
 
+function js() {
+    return gulp.src('./src/js/*')
+        .pipe(minify())
+        .pipe(gulp.dest('./dist/js'))
+        .pipe(browserSync.stream());
+}
 
 function fonts() {
     return gulp.src('./src/fonts/*')
-      .pipe(gulp.dest('./dist/fonts'));
+        .pipe(gulp.dest('./dist/fonts'));
 }
 
 function images() {
     return gulp.src('./src/img/*')
-      .pipe(gulp.dest('./dist/img'));
+        .pipe(gulp.dest('./dist/img'));
 }
   
 
@@ -47,6 +54,7 @@ function watch() {
     });
     gulp.watch('src/scss/**/*.scss', styles);
     gulp.watch('src/pug/**/*.pug', templates);
+    gulp.watch('src/js/**/*.js', js);
 
 }
 exports.fonts = fonts;
