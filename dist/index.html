@@ -31,15 +31,20 @@
     </div>
     <div class="aside-left">
       <div class="header-search">
-        <div class="header-search__logo">HiChat</div>
+        <div class="header-search__logo"><img src="img/logo.png" alt=""></div>
         <div class="header-search__input">
-          <input type="text">
+          <label>
+            <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 512 512">
+              <path d="M508.9 478.7L360.1 330c28.2-34.8 45.2-79.1 45.2-127.3 0-111.7-90.9-202.7-202.7-202.7S0 90.9 0 202.7s90.9 202.7 202.7 202.7c48.2 0 92.5-17 127.3-45.2l148.7 148.7c4.2 4.2 10.9 4.2 15.1 0l15.1-15.1C513 489.6 513 482.9 508.9 478.7zM202.7 362.7c-88.2 0-160-71.8-160-160s71.8-160 160-160 160 71.8 160 160S290.9 362.7 202.7 362.7z"></path>
+            </svg>
+            <input type="text" placeholder="Search">
+          </label>
         </div>
       </div>
       <div class="add-friend">
         <div class="add-friend__label">Friends</div>
         <div class="add-friend__button">
-          <button type="button">New</button>
+          <button class="button" type="button">New</button>
         </div>
       </div>
       <div class="friends-list">
@@ -63,7 +68,36 @@
     </div>
     <div class="center">
       <div class="chat"> 
-        <div class="chat__messages"></div>
+        <div class="chat__messages">
+          <div class="message">
+            <div class="message__img"><img src="https://fakeimg.pl/50x50/"></div>
+            <div class="message__content">
+              <div class="message__text">Sample text</div>
+              <div class="message__date">2p.m.</div>
+            </div>
+          </div>
+          <div class="message message--owner">
+            <div class="message__img"><img src="https://fakeimg.pl/50x50/"></div>
+            <div class="message__content">
+              <div class="message__text">Sample text</div>
+              <div class="message__date">2p.m.</div>
+            </div>
+          </div>
+          <div class="message">
+            <div class="message__img"> <img src="https://fakeimg.pl/50x50/"></div>
+            <div class="message__content">
+              <div class="message__text">Sample text</div>
+              <div class="message__date">2p.m.</div>
+            </div>
+          </div>
+          <div class="message message--owner">
+            <div class="message__img"> <img src="https://fakeimg.pl/50x50/"></div>
+            <div class="message__content">
+              <div class="message__text">Sample text</div>
+              <div class="message__date">2p.m.</div>
+            </div>
+          </div>
+        </div>
         <div class="chat__actions">
           <div class="chat__inputs">
             <input class="chat__input-text" type="text">
@@ -75,7 +109,7 @@
             </label>
           </div>
           <div class="chat__send">
-            <button id="send-message">Send    </button>
+            <button class="button" id="send-message">Send    </button>
           </div>
         </div>
       </div>

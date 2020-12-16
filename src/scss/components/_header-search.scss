@@ -1,10 +1,33 @@
 .header-search {
+    align-items: center;
     background-color: #D6DFE6;
+    display: flex;
     height: $header-height;
+    justify-content: space-between;
+    padding: 20px 40px;
 
     &__input {
+        label {
+            align-items: center;
+            display: flex;
+
+            svg {
+                fill: #647584;
+                height: 20px;
+                width: 20px;
+            }
+        }
         input {
-            
+            background: transparent;
+            border: none;
+            font-size: 18px;
+            height: 30px;
+            line-height: 30px;
+            padding: 0 10px;
+            width: 80px;
+            &::placeholder {
+                color: #647584;
+            }
         }
     }
 }

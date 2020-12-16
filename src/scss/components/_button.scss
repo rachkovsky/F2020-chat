@@ -1,0 +1,16 @@
+.button {
+    background: $color-primary;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 18px;
+    height: 100%;
+    line-height: 100%;
+    padding: 0 30px;
+    text-transform: uppercase;
+
+    &:hover, &:active {
+        border: none;
+    }
+}

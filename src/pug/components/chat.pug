@@ -1,26 +1,30 @@
 .chat 
     .chat__messages
-        //- .message
 
-        //-     .message__img
-        //-         img(src="https://fakeimg.pl/50x50/")
-        //-     .message__text Sample text
-        //-     .message__date 2p.m.
-        //- .message.message--owner
-        //-     .message__img 
-        //-         img(src="https://fakeimg.pl/50x50/")
-        //-     .message__text Sample text
-        //-     .message__date 2p.m.
-        //- .message
-        //-     .message__img 
-        //-         img(src="https://fakeimg.pl/50x50/")
-        //-     .message__text Sample text
-        //-     .message__date 2p.m.
-        //- .message.message--owner
-        //-     .message__img 
-        //-         img(src="https://fakeimg.pl/50x50/")
-        //-     .message__text Sample text
-        //-     .message__date 2p.m.
+        .message
+            .message__img
+                img(src="https://fakeimg.pl/50x50/")
+            .message__content
+                .message__text Sample text
+                .message__date 2p.m.
+        .message.message--owner
+            .message__img
+                img(src="https://fakeimg.pl/50x50/")
+            .message__content
+                .message__text Sample text
+                .message__date 2p.m.
+        .message
+            .message__img 
+                img(src="https://fakeimg.pl/50x50/")
+            .message__content
+                .message__text Sample text
+                .message__date 2p.m.
+        .message.message--owner
+            .message__img 
+                img(src="https://fakeimg.pl/50x50/")
+            .message__content
+                .message__text Sample text
+                .message__date 2p.m.
 
     .chat__actions
         .chat__inputs
@@ -31,4 +35,4 @@
                         path(d='m160 512c-88.2 0-160-71.8-160-160v-229.3c0-8.8 7.2-16 16-16s16 7.2 16 16v229.3c0 70.6 57.4 128 128 128s128-57.4 128-128v-234.7c0-47.1-38.3-85.3-85.3-85.3-47.1 0-85.3 38.3-85.3 85.3v213.3c0 23.5 19.1 42.7 42.7 42.7s42.7-19.1 42.7-42.7v-208c0-8.8 7.2-16 16-16s16 7.2 16 16v208c0 41.2-33.5 74.7-74.7 74.7s-74.7-33.5-74.7-74.7v-213.3c0-64.7 52.6-117.3 117.3-117.3 64.7 0 117.3 52.7 117.3 117.3v234.7c0 88.2-71.8 160-160 160zm0 0')
                 input(type="file")
         .chat__send
-            button#send-message Send    
+            button#send-message.button Send    

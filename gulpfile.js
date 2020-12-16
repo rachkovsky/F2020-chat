@@ -26,6 +26,18 @@ function templates() {
     .pipe(browserSync.stream());
 }
 
+
+function fonts() {
+    return gulp.src('./src/fonts/*')
+      .pipe(gulp.dest('./dist/fonts'));
+}
+
+function images() {
+    return gulp.src('./src/img/*')
+      .pipe(gulp.dest('./dist/img'));
+}
+  
+
 function watch() {
     browserSync.init({
         server: {
@@ -37,5 +49,6 @@ function watch() {
     gulp.watch('src/pug/**/*.pug', templates);
 
 }
-
+exports.fonts = fonts;
+exports.images = images;
 exports.watch = watch;

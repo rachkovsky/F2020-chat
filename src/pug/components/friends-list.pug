@@ -1,12 +1,16 @@
 .header-search
-    .header-search__logo HiChat
+    .header-search__logo
+        img(src="img/logo.png", alt="")
     .header-search__input
-        input(type="text")
+        label
+            svg(xmlns='http://www.w3.org/2000/svg' viewbox='0 0 512 512')
+                path(d='M508.9 478.7L360.1 330c28.2-34.8 45.2-79.1 45.2-127.3 0-111.7-90.9-202.7-202.7-202.7S0 90.9 0 202.7s90.9 202.7 202.7 202.7c48.2 0 92.5-17 127.3-45.2l148.7 148.7c4.2 4.2 10.9 4.2 15.1 0l15.1-15.1C513 489.6 513 482.9 508.9 478.7zM202.7 362.7c-88.2 0-160-71.8-160-160s71.8-160 160-160 160 71.8 160 160S290.9 362.7 202.7 362.7z')
+            input(type="text", placeholder="Search")
 
 .add-friend
     .add-friend__label Friends
     .add-friend__button
-        button(type="button") New
+        button.button(type="button") New
 
 .friends-list
 

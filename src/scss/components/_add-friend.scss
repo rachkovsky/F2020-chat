@@ -1,4 +1,22 @@
 .add-friend {
-    background-color: #F1F5F8;;
+    align-items: center;
+    background-color: #F1F5F8;
+    border: 1px solid #D6DFE6;
+    border-left: none;
+    color: $color-primary;
+    display: flex;
+    
     height: $header-height;
+    justify-content: space-between;
+    padding: 20px 40px;
+
+    &__button {
+        height: 100%;
+    }
+
+    &__label {
+        font-size: 18px;
+        font-weight: 400;
+        text-transform: uppercase;
+    }
 }
