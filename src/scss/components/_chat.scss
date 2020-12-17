@@ -2,13 +2,14 @@
     background: transparent;
     display: flex;
     flex-direction: column;
-    height: 100%;
+    height: calc(100vh - #{$header-height});
     justify-content: space-between;
     padding: 30px;
 
     &__messages {
         display: flex;
         flex-direction: column;
+        overflow: auto;
         padding: 20px;
     }
 
@@ -29,7 +30,7 @@
         font-size: 20px;
         height: 70px;
         line-height: 70px;
-        padding: 0;
+        padding: 0 20px;
         width: 100%;
     }
     

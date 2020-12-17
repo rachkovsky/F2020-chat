@@ -154,6 +154,7 @@ table {
   grid-area: header-top; }
 
 .aside-left {
+  background: #D6DFE6;
   grid-area: aside-left; }
 
 .aside-right {
@@ -198,12 +199,13 @@ table {
   background: transparent;
   display: flex;
   flex-direction: column;
-  height: 100%;
+  height: calc(100vh - 100px);
   justify-content: space-between;
   padding: 30px; }
   .chat__messages {
     display: flex;
     flex-direction: column;
+    overflow: auto;
     padding: 20px; }
   .chat__actions {
     display: flex; }
@@ -218,7 +220,7 @@ table {
     font-size: 20px;
     height: 70px;
     line-height: 70px;
-    padding: 0;
+    padding: 0 20px;
     width: 100%; }
   .chat__input-file {
     align-items: center;
@@ -241,7 +243,8 @@ table {
 .friends-list {
   background-color: #D6DFE6;
   grid-area: friends-list;
-  height: 100%; }
+  max-height: calc(100vh - 200px);
+  overflow: auto; }
 
 .friend-preview {
   align-items: flex-start;

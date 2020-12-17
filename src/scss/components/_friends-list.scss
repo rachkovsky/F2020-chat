@@ -1,5 +1,6 @@
 .friends-list {
     background-color: #D6DFE6;
     grid-area: friends-list;
-    height: 100%;
+    max-height: calc(100vh - #{2 * $header-height});
+    overflow: auto;
 }

@@ -4,6 +4,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const sendButton = document.getElementById('send-message');
     const messageInput = document.querySelector('.chat__input-text');
     const friendsListContainer = document.querySelector('.friends-list');
+    
 
     const chat1 = [
         {
