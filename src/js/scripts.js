@@ -4,90 +4,28 @@ document.addEventListener('DOMContentLoaded', function() {
     const sendButton = document.getElementById('send-message');
     const messageInput = document.querySelector('.chat__input-text');
     const friendsListContainer = document.querySelector('.friends-list');
+
+    const socket = io('http://localhost:4000');
+
+
+    socket.on('message_sent', (data) => {
+        console.log('===== ', data);
+    })
     
+    let chatRooms = [];
 
-    const chat1 = [
-        {
-            message: "Some text",
-            date: '1608138141315',
-            id: '1',
-            owner: 'rt75hjut56y74'
-        },
-        {
-            message: "Some text 2",
-            date: '1608138161315',
-            id: '2',
-            owner: 0
-        },
-        {
-            message: "Some text sample",
-            date: '',
-            id: '3',
-            owner: 'rt75hjut56y74'
-        },
-        {
-            message: "Some text 4",
-            date: '',
-            id: '4',
-            owner: 0
-        },
-        {
-            message: "Some text 5",
-            date: '',
-            id: '5',
-            owner: 0
-        },
-    
-    ];
+    fetch('http://localhost:4000/chats')
+    .then((res) => {
+        return res.json();
+    })
+    .then((result) => {
+        chatRooms = result;
+        chatRooms.forEach((el) => {
+            createFriendsList(el);
+        })
+        renderFriendsList(chatRooms);
+    })
 
-    const chat2 = [
-        {
-            message: "123 Some text",
-            date: '',
-            id: '1',
-            owner: 'rt75hjut56y74'
-        },
-        {
-            message: "123 Some text 2",
-            date: '',
-            id: '2',
-            owner: 0
-        },
-        {
-            message: "123 Some text sample",
-            date: '',
-            id: '3',
-            owner: 'rt75hjut56y74'
-        },
-        {
-            message: "Some text 4",
-            date: '',
-            id: '4',
-            owner: 0
-        },
-        {
-            message: "Some text 5",
-            date: '',
-            id: '5',
-            owner: 0
-        },
-    
-    ];
-
-    const chatRooms = [
-        {
-            chat: chat1,
-            id: 'fdsfasgasdf6758567867gh',
-            name: "John Doe"
-
-        },
-        {
-            chat: chat2,
-            id: 'fd785685asdfghlhjklghkj',
-            name: "Jane Doe"
-            
-        }
-    ]
 
     friendsListContainer.addEventListener('click', (event) => {
 
@@ -111,6 +49,39 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
+    sendButton.addEventListener('click', (event) => {
+        if (messageInput.value) {
+            const msg = {
+                message: messageInput.value,
+                // id: chat1.length + 1,
+                owner: 0,
+                date: Date.now()
+
+            }
+
+            // chat1.push(msg);
+            createMessage(msg);
+            // console.log(chat1);
+            socket.emit('message', {message: messageInput.value});
+        }
+    });
+
+    messageInput.addEventListener('keyup', (event) => {
+        if (event.keyCode === 13) {
+            event.preventDefault();
+            sendButton.click();
+        }
+    });
+
+    function renderFriendsList(chatRooms) {
+        let result =''
+        chatRooms.forEach((chat) => {
+            result = result + createFriendsList(chat);
+        })
+
+        friendsListContainer.insertAdjacentHTML('beforeEnd', result);
+    }
+
     function renderChat(id) {
        
         let result = chatRooms.find((el,i) => {
@@ -124,46 +95,6 @@ document.addEventListener('DOMContentLoaded', function() {
             })
         }
     }
-
-
-    sendButton.addEventListener('click', (event) => {
-        if (messageInput.value) {
-            const msg = {
-                message: messageInput.value,
-                id: chat1.length + 1,
-                owner: 0,
-                date: Date.now()
-
-            }
-
-            chat1.push(msg);
-            createMessage(msg);
-            console.log(chat1);
-        }
-    });
-
-    messageInput.addEventListener('keyup', (event) => {
-        if (event.keyCode === 13) {
-            event.preventDefault();
-            sendButton.click();
-        }
-    });
-
-    chatRooms.forEach((el) => {
-        createFriendsList(el);
-    })
-
-    renderFriendsList(chatRooms);
-
-    function renderFriendsList(chatRooms) {
-        let result =''
-        chatRooms.forEach((chat) => {
-            result = result + createFriendsList(chat);
-        })
-
-        friendsListContainer.insertAdjacentHTML('beforeEnd', result);
-    }
-
     
     function createMessage(options) {
 
